@@ -1,0 +1,17 @@
+<h1>Editing visit</h1>
+
+<%= error_messages_for :visit %>
+
+<% form_for(@visit) do |f| %>
+  <p>
+    <b>Count</b><br />
+    <%= f.text_field :count %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @visit %> |
+<%= link_to 'Back', visits_path %>
