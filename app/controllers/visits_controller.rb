@@ -1,7 +1,7 @@
 class VisitsController < ApplicationController
 
   def hi
-    @visits = Visit.first || Visit.create( :count => 0)
+    @visits = Visit.find(:first) || Visit.create( :count => 0)
     @visits.count += 1
     @visits.save!
 
